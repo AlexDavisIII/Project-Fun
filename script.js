@@ -14,4 +14,15 @@ async function getGames(){
             console.log(jsonData)})
 }
 
-getGames()
+
+async function personalFavoriteGame(){
+    const games = await fetch('http://localhost:3000/mygames')
+    .then(response => response.json())
+    .then(jsonData => {
+        gamesList.innerHTML = `My Favorite game is: ${jsonData["games"][0]["Name"]}`;
+        console.log(jsonData)
+    });
+}
+
+personalFavoriteGame();
+//getGames()
