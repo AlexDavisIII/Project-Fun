@@ -1,0 +1,23 @@
+{
+  "name": "project-fun",
+  "version": "1.0.0",
+  "description": "Welcome to Project Fun!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexDavisIII/Project-Fun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexDavisIII/Project-Fun/issues"
+  },
+  "homepage": "https://github.com/AlexDavisIII/Project-Fun#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
