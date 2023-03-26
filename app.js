@@ -25,7 +25,7 @@ app.get('/mygames', (req, res) => {
                 "Name": "SSX 3",
                 "Platform": ["Playstation 2", "GameCube", "Xbox"],
                 "Genre": ["Arcade", "Alternative Sports"],
-                "Developer": "EA Sports BIG"
+                "Developer": "EA Sports BIG",
             },
             {
                 "id": 3,

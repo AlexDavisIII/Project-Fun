@@ -7,7 +7,7 @@ const featuredHeading = document.getElementById('featuredHeading');
 const featuredGame = document.getElementById('featuredGame');
 const favoriteHeading = document.getElementById('favoriteHeading');
 const favoriteGame = document.getElementById('favoriteGame');
-
+const randomizer = document.getElementById('randomizer');
 
 console.log("hello");
 
@@ -120,9 +120,13 @@ async function personalFavoriteGame(){
 }
 
 
-
-
-setHeading("h1", "PC Resort");
-setSubHeading("h2", "A fun place to be suggested a PC game");
+setHeading("h1", "PC Game Picker");
+//setSubHeading("h2", "How about this?");
 getGames();
 //personalFavoriteGame();
+
+
+//Event Listeners
+randomizer.addEventListener('click', () => {
+    getGames();
+})
