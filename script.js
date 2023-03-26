@@ -37,12 +37,85 @@ function setSubHeading (tag = "h2", message = "Welcome to PC Resort!"){
 
 //Function calling rawg API to display list of games by platform
 async function getGames(){
-    const games = await fetch(`https://api.rawg.io/api/platforms?key=${API_KEY}`)
+    const games = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}`)
         .then(response => response.json())
         .then(jsonData => {
-            gamesList.innerHTML =`<p>${JSON.stringify(jsonData)}</p>`
-            console.log(jsonData)})
+            //gamesList.innerHTML =`<p>${JSON.stringify(jsonData)}</p>`
+            console.log(jsonData);
+            
+            /* for (let i = 0; i <= jsonData.results.length; i++){
+                if(jsonData.results[i].platforms[i].platform.name === "PC"){
+                    let gameName = jsonData.results[i].name; //Name of selected game
+                    let gameImage = jsonData.results[i].background_image; //Get background image of game
+
+                   return featuredGame.innerHTML = `<ul>
+                    <li>${gameName}</li>
+                    <li><img src="${gameImage}"></li>
+                    </ul>`;
+
+                } else if (jsonData.results[i].platforms[i].platform.name != "PC") {
+                    featuredGame.innerHTML = "<p>Searching...</p>"
+                    console.log("Searching...");
+                    console.log(jsonData.results[i].platforms[i].platform.name);
+
+                }
+            }**/
+
+
+            for (let i = 0; i <= jsonData.results.length; i++){
+                for(let y = 0; y <= jsonData.results[i].platforms.length; y++){
+              
+                    if(jsonData.results[i].platforms[y].platform.name !== "PC"){
+                        
+                        featuredGame.innerHTML = "<p>Searching...</p>"
+                        console.log("Searching...");
+                        console.log(jsonData.results[i].platforms[i].platform.name);
+
+                    } else if (jsonData.results[i].platforms[y].platform.name === "PC") {
+                        let gameName = jsonData.results[i].name; //Name of selected game
+                        let gameImage = jsonData.results[i].background_image; //Get background image of game
+
+                    return featuredGame.innerHTML = `<ul>
+                        <li>${gameName}</li>
+                        <li><img src="${gameImage}"></li>
+                        </ul>`;                    
+
+                    }
+
+
+                }
+                
+                /*
+                if(jsonData.results[i].platforms[i].platform.name !== "PC"){
+                    
+                    featuredGame.innerHTML = "<p>Searching...</p>"
+                    console.log("Searching...");
+                    console.log(jsonData.results[i].platforms[i].platform.name);
+                    if(){
+
+                    }
+
+
+                } else if (jsonData.results[i].platforms[i].platform.name === "PC") {
+                    let gameName = jsonData.results[i].name; //Name of selected game
+                    let gameImage = jsonData.results[i].background_image; //Get background image of game
+
+                   return featuredGame.innerHTML = `<ul>
+                    <li>${gameName}</li>
+                    <li><img src="${gameImage}"></li>
+                    </ul>`;                    
+
+                }**/
+
+
+
+
+            }
+
+
+        })
 }
+
 
 
 //Function calling my API to display my personal favorite game
@@ -56,7 +129,9 @@ async function personalFavoriteGame(){
 }
 
 
+
+
 setHeading("h1", "PC Resort");
 setSubHeading("h2", "A fun place to be a PC gamer");
+getGames();
 //personalFavoriteGame();
-//getGames();
