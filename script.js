@@ -64,15 +64,18 @@ async function getGames(){
             //Where the magic happens for the Featured Game section
             for (let i = Math.floor(Math.random() * jsonData.results.length); i <= jsonData.results.length; i++){
                 for(let y = 0; y <= jsonData.results[i].platforms.length; y++){
-                    if(jsonData.results[i].platforms[y].platform.name !== "PC" && i <= jsonData.results.length){
+                    if(jsonData.results[i].platforms[y].platform.name !== "PC"){
+                        if(y > jsonData.results[i].platforms[y].length){
+                            console.log("try again");
+                        }
                         featuredGame.innerHTML = "<p>Searching...</p>"
                         console.log("Searching...");
-                        console.log(jsonData.results[i].platforms[i].platform.name);
-                    } else if (jsonData.results[i].platforms[y].platform.name === "PC") {
+                        console.log(jsonData.results[i].platforms[y].platform.name);
+                    }else if (jsonData.results[i].platforms[y].platform.name === "PC") {
                         let gameName = jsonData.results[i].name; //Name of selected game
                         let gameImage = jsonData.results[i].background_image; //Get background image of game
-
-                    return featuredGame.innerHTML = `<ul>
+                    
+                        return featuredGame.innerHTML = `<ul>
                         <li>${gameName}</li>
                         <li><img src="${gameImage}" width="30%;"></li>
                         </ul>`;                    
@@ -100,13 +103,7 @@ async function getGames(){
                     </ul>`;                    
 
                 }**/
-
-
-
-
             }
-
-
         })
 }
 
@@ -126,6 +123,6 @@ async function personalFavoriteGame(){
 
 
 setHeading("h1", "PC Resort");
-setSubHeading("h2", "A fun place to be a PC gamer");
+setSubHeading("h2", "A fun place to be suggested a PC game");
 getGames();
 //personalFavoriteGame();
