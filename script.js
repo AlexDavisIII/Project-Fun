@@ -61,30 +61,24 @@ async function getGames(){
                 }
             }**/
 
-
-            for (let i = 0; i <= jsonData.results.length; i++){
+            //Where the magic happens for the Featured Game section
+            for (let i = Math.floor(Math.random() * jsonData.results.length); i <= jsonData.results.length; i++){
                 for(let y = 0; y <= jsonData.results[i].platforms.length; y++){
-              
-                    if(jsonData.results[i].platforms[y].platform.name !== "PC"){
-                        
+                    if(jsonData.results[i].platforms[y].platform.name !== "PC" && i <= jsonData.results.length){
                         featuredGame.innerHTML = "<p>Searching...</p>"
                         console.log("Searching...");
                         console.log(jsonData.results[i].platforms[i].platform.name);
-
                     } else if (jsonData.results[i].platforms[y].platform.name === "PC") {
                         let gameName = jsonData.results[i].name; //Name of selected game
                         let gameImage = jsonData.results[i].background_image; //Get background image of game
 
                     return featuredGame.innerHTML = `<ul>
                         <li>${gameName}</li>
-                        <li><img src="${gameImage}"></li>
+                        <li><img src="${gameImage}" width="30%;"></li>
                         </ul>`;                    
 
                     }
-
-
                 }
-                
                 /*
                 if(jsonData.results[i].platforms[i].platform.name !== "PC"){
                     
