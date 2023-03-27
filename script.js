@@ -1,4 +1,3 @@
-
 import { API_KEY } from "./config.js";
 
 const heading = document.getElementById('pcHead');
@@ -13,6 +12,9 @@ console.log("hello");
 
 //Sets html text to static headings
 featuredHeading.innerHTML = "<h1>You should check out...<h1>"
+
+
+
 
 
 //makes a heading based on two paramateres. Whether it is an h1-h5 tag and the message
@@ -88,9 +90,9 @@ setHeading("h1", "PC Game Picker");
 getPersonalQuote();
 getGames();
 
-
-
 //Event Listeners
 randomizer.addEventListener('click', () => {
     getGames();
 })
+
+
