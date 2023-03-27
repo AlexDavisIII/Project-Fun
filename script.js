@@ -1,19 +1,19 @@
+
 import { API_KEY } from "./config.js";
 
 const heading = document.getElementById('pcHead');
 const subHeading = document.getElementById('pcSubHead');
-const gamesList = document.getElementById('gamesList');
+const quoteList = document.getElementById('quoteList');
 const featuredHeading = document.getElementById('featuredHeading');
 const featuredGame = document.getElementById('featuredGame');
-const favoriteHeading = document.getElementById('favoriteHeading');
-const favoriteGame = document.getElementById('favoriteGame');
 const randomizer = document.getElementById('randomizer');
 
+//checking to make sure things even connected in the first place
 console.log("hello");
 
 //Sets html text to static headings
-featuredHeading.innerHTML = "<h1>Featured Game<h1>"
-favoriteHeading.innerHTML = "<h1>Favorite Game<h1>"
+featuredHeading.innerHTML = "<h1>You should check out...<h1>"
+//favoriteHeading.innerHTML = "<h1>Favorite Game<h1>"
 
 
 //makes a heading based on two paramateres. Whether it is an h1-h5 tag and the message
@@ -43,23 +43,7 @@ async function getGames(){
             //gamesList.innerHTML =`<p>${JSON.stringify(jsonData)}</p>`
             console.log(jsonData);
             
-            /* for (let i = 0; i <= jsonData.results.length; i++){
-                if(jsonData.results[i].platforms[i].platform.name === "PC"){
-                    let gameName = jsonData.results[i].name; //Name of selected game
-                    let gameImage = jsonData.results[i].background_image; //Get background image of game
 
-                   return featuredGame.innerHTML = `<ul>
-                    <li>${gameName}</li>
-                    <li><img src="${gameImage}"></li>
-                    </ul>`;
-
-                } else if (jsonData.results[i].platforms[i].platform.name != "PC") {
-                    featuredGame.innerHTML = "<p>Searching...</p>"
-                    console.log("Searching...");
-                    console.log(jsonData.results[i].platforms[i].platform.name);
-
-                }
-            }**/
 
             //Where the magic happens for the Featured Game section
             for (let i = Math.floor(Math.random() * jsonData.results.length); i <= jsonData.results.length; i++){
@@ -82,27 +66,6 @@ async function getGames(){
 
                     }
                 }
-                /*
-                if(jsonData.results[i].platforms[i].platform.name !== "PC"){
-                    
-                    featuredGame.innerHTML = "<p>Searching...</p>"
-                    console.log("Searching...");
-                    console.log(jsonData.results[i].platforms[i].platform.name);
-                    if(){
-
-                    }
-
-
-                } else if (jsonData.results[i].platforms[i].platform.name === "PC") {
-                    let gameName = jsonData.results[i].name; //Name of selected game
-                    let gameImage = jsonData.results[i].background_image; //Get background image of game
-
-                   return featuredGame.innerHTML = `<ul>
-                    <li>${gameName}</li>
-                    <li><img src="${gameImage}"></li>
-                    </ul>`;                    
-
-                }**/
             }
         })
 }
@@ -110,20 +73,25 @@ async function getGames(){
 
 
 //Function calling my API to display my personal favorite game
-async function personalFavoriteGame(){
-    const games = await fetch('http://localhost:3000/mygames')
+async function getPersonalQuote(){
+    const games = await fetch('http://localhost:3000/myquote')
     .then(response => response.json())
     .then(jsonData => {
-        gamesList.innerHTML = `My Favorite game is: ${jsonData["games"][0]["Name"]}`;
-        console.log(jsonData)
+
+        for(let i = Math.floor(Math.random() * jsonData.quotes.length); i < jsonData.quotes.length; i++){
+            console.log(i);
+            return quoteList.innerHTML = `${JSON.stringify(jsonData.quotes[i].quote)} ~ ${jsonData.quotes[i].author}`;
+            
+        }
     });
 }
 
 
+
 setHeading("h1", "PC Game Picker");
-//setSubHeading("h2", "How about this?");
+getPersonalQuote();
 getGames();
-//personalFavoriteGame();
+
 
 
 //Event Listeners
