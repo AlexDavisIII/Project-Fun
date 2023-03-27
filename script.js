@@ -13,7 +13,6 @@ console.log("hello");
 
 //Sets html text to static headings
 featuredHeading.innerHTML = "<h1>You should check out...<h1>"
-//favoriteHeading.innerHTML = "<h1>Favorite Game<h1>"
 
 
 //makes a heading based on two paramateres. Whether it is an h1-h5 tag and the message
@@ -40,11 +39,8 @@ async function getGames(){
     const games = await fetch(`https://api.rawg.io/api/games?key=${API_KEY}`)
         .then(response => response.json())
         .then(jsonData => {
-            //gamesList.innerHTML =`<p>${JSON.stringify(jsonData)}</p>`
             console.log(jsonData);
             
-
-
             //Where the magic happens for the Featured Game section
             for (let i = Math.floor(Math.random() * jsonData.results.length); i <= jsonData.results.length; i++){
                 for(let y = 0; y <= jsonData.results[i].platforms.length; y++){

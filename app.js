@@ -15,7 +15,7 @@ app.get('/myquote', (req, res) => {
         "quotes": [
             {
                 "id": 1,
-                "quote": "Have you ever thought to yourself, what if you were a the fastest hedgehog of all time? ...me either.",
+                "quote": "Have you ever thought to yourself, what if you were the fastest hedgehog of all time? ...me either.",
                 "author": "Alex Davis"
             },
             {
@@ -30,7 +30,7 @@ app.get('/myquote', (req, res) => {
             },
             {
                 "id": 4,
-                "quote": "When I was young, I asked for Nintendo. I grew to a teen, and asked for Playstation. /n I went to college and got an Xbox. Now that I'm wiser, I only need PC",
+                "quote": "When I was young, I asked for Nintendo. I grew to a teen, and asked for Playstation. I went to college and got an Xbox. Now that I'm wiser, I only need PC",
                 "author": "Alex Davis"
             },
             {

@@ -12,3 +12,7 @@
 body{
     font-family: 'Lexend', sans-serif;
 }
+
+#featuredGame ul li{
+    list-style: none;
+}
