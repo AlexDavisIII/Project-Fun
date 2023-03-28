@@ -1,3 +1,16 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: 'Lexend', sans-serif;
     background: rgb(34,193,195);
@@ -11,10 +24,12 @@ body{
     justify-content: space-around;
     align-content:center;
     align-items: center;
+    gap: 25px;
 }
 
 #featuredGame ul li{
     list-style: none;
+    font-size: 28px;
 }
 
 #featuredGame img{
@@ -31,11 +46,11 @@ body{
     font-weight: bold;
     border-radius: 5%;
     box-shadow: 5px 4px 5px rgb(0, 46, 3);
-    padding: 10px;
-    width: 200px;
-    height: 30px;
-   /* text-align:center; */
+    padding: 20px;
+    width: 150px;
+    height: 85px;
 }
+
 
 
 nav{
@@ -49,6 +64,10 @@ footer{
     background-color: black;
     color: white;
     padding: 10px;
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 1600px){
