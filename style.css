@@ -30,6 +30,7 @@ body{
 #featuredGame ul li{
     list-style: none;
     font-size: 28px;
+    margin-top: 15px;
 }
 
 #featuredGame img{
@@ -66,12 +67,11 @@ body{
 }
 
 
-
 nav{
     background-color: black;
     color: white;
     padding: 10px;
-
+    text-align: center;
 }
 
 footer{
@@ -82,9 +82,10 @@ footer{
     bottom: 0;
     width: 100%;
     margin-top: 15px;
+    text-align: center;
 }
 
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1500px){
 
     #featuredContainer{
         flex-direction: column;
