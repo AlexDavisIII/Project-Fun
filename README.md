@@ -1,4 +1,5 @@
 This application does the following: 
+
     -Calls from an external, third party API (RAWG API) to provide users with one game suggestion when visiting the page OR by clicking the "Different Game" button. 
     
     -Steps through objects and arrays provided by the external API at random to select game image art and the name of the game the art refers to, but ONLY if the game found is available to play on the PC. This is by design as I want this to be an application built for people who play games primarily on the PC.
