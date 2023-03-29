@@ -6,12 +6,13 @@ const quoteList = document.getElementById('quoteList');
 const featuredHeading = document.getElementById('featuredHeading');
 const featuredGame = document.getElementById('featuredGame');
 const randomizer = document.getElementById('randomizer');
-
+const copyright = document.getElementById('copyright');
 //checking to make sure things even connected in the first place
 console.log("hello");
 
 //Sets html text to static headings
 featuredHeading.innerHTML = "<h1>You should check out...<h1>"
+copyright.innerHTML = "<p>&copy; Alex Davis III with Code Louisville</p>"
 
 
 //makes a heading based on two paramateres. Whether it is an h1-h5 tag and the message
@@ -71,10 +72,11 @@ async function getPersonalQuote(){
 }
 
 
-
+//function calls for displaying information to the app
 setHeading("h1", "PC Game Picker");
 getPersonalQuote();
 getGames();
+
 
 //Event Listeners
 randomizer.addEventListener('click', () => {
