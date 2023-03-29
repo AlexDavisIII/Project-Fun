@@ -12,6 +12,7 @@ This application does the following:
 In order for this application to run properly:
 
 - Install nodejs and npm. Make sure they are updated them if you already have them installed.
+- Run "npm install express".
 - Run "npm start"
 - If application was started before running "npm start", refresh the application.
 
