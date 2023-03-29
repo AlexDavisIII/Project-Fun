@@ -14,25 +14,11 @@ console.log("hello");
 featuredHeading.innerHTML = "<h1>You should check out...<h1>"
 
 
-
-
-
 //makes a heading based on two paramateres. Whether it is an h1-h5 tag and the message
 function setHeading (tag = "h1", message = "Welcome to PC Resort!"){
     let finalMessage = `<${tag}>${message}</${tag}>`;
     return heading.innerHTML = finalMessage;
     
-}
-
-//makes a sub heading based on two paramateres. Whether it is an h1-h5 tag and the message
-function setSubHeading (tag = "h2", message = "Welcome to PC Resort!"){
-    
-    if(tag === "h1"){
-        return subHeading.innerHTML = "Close. Please try using h2 or lower instead";
-    }else{
-        let finalMessage = `<${tag}>${message}</${tag}>`;
-        return subHeading.innerHTML = finalMessage;
-    }
 }
 
 
