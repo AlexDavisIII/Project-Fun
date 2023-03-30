@@ -1,7 +1,6 @@
 import { API_KEY } from "./config.js";
 
 const heading = document.getElementById('pcHead');
-const subHeading = document.getElementById('pcSubHead');
 const quoteList = document.getElementById('quoteList');
 const featuredHeading = document.getElementById('featuredHeading');
 const featuredGame = document.getElementById('featuredGame');

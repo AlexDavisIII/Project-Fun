@@ -40,6 +40,7 @@ section{
 
 #featuredGame ul li{
     list-style: none;
+    margin-top:10px;
     font-size: 3.0em;
     color: white;
     text-shadow: 3px 0 7px black;
@@ -115,12 +116,12 @@ footer{
     }
 
     #featuredGame ul li{
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .button{    
-        padding: 0px;   
-        height: 55px;
+        padding: 10px;   
+        height: 65px;
     }
 
     .button:hover{
@@ -161,7 +162,7 @@ footer{
     }
 
     #featuredGame ul li{
-        font-size: 1em;
+        font-size: 1.5em;
     }
 
     #pcHead{
