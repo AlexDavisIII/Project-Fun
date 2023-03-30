@@ -1,6 +1,7 @@
 import { API_KEY } from "./config.js";
 
 const heading = document.getElementById('pcHead');
+const subHeading = document.getElementById('pcSubHead');
 const quoteList = document.getElementById('quoteList');
 const featuredHeading = document.getElementById('featuredHeading');
 const featuredGame = document.getElementById('featuredGame');
@@ -18,6 +19,14 @@ copyright.innerHTML = "<p>&copy; Alex Davis III with Code Louisville</p>"
 function setHeading (tag = "h1", message = "Welcome to PC Resort!"){
     let finalMessage = `<${tag}>${message}</${tag}>`;
     return heading.innerHTML = finalMessage;
+    
+}
+
+
+//makes a heading based on two paramateres. Whether it is an h1-h5 tag and the message
+function setSubHeading (tag = "h3", message){
+    let finalMessage = `<${tag}>${message}</${tag}>`;
+    return subHeading.innerHTML = finalMessage;
     
 }
 
@@ -65,7 +74,6 @@ async function getPersonalQuote(){
         for(let i = Math.floor(Math.random() * jsonData.quotes.length); i < jsonData.quotes.length; i++){
             console.log(i);
             return quoteList.innerHTML = `${JSON.stringify(jsonData.quotes[i].quote)} ~ ${jsonData.quotes[i].author}`;
-            
         }
     });
 }
@@ -73,6 +81,7 @@ async function getPersonalQuote(){
 
 //function calls for displaying information to the app
 setHeading("h1", "PC Game Picker");
+setSubHeading("h2", "Not sure what to play on your PC? We're here for you!" )
 getPersonalQuote();
 getGames();
 

@@ -28,6 +28,16 @@ section{
     font-size: 1.5em;
 }
 
+.subMessage{
+    display:flex;
+    flex-direction: row;
+    font-size: 2.0em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
 #featuredContainer{
     display: flex;
     flex-direction: row;
@@ -133,6 +143,14 @@ footer{
         font-size: 1em;
     }
 
+    .subMessage{
+        display:flex;
+        flex-direction: row;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 10px;
+    }
+
     nav{
         font-size: 40px;
         text-align: center;
@@ -174,6 +192,16 @@ footer{
         font-size: 20px;
         padding: 20px;
     }
+
+    .subMessage{
+        display:flex;
+        flex-direction: row;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 10px;
+    }
+
+
     nav{
         text-align: center;
     }
