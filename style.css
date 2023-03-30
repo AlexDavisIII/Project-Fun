@@ -20,7 +20,7 @@ body{
 }
 
 section{
-    /*max-height:80vh;*/
+    height: 100vh;
     width: 100vw;
 }
 
@@ -89,7 +89,6 @@ section{
     height: 85px;
 }
 
-
 nav{
     background-color: black;
     color: white;
@@ -100,7 +99,9 @@ nav{
 footer{
     background-color: black;
     color: white;
-    padding: 50px;
+    position: relative;
+    /*bottom: 0;
+    padding: 50px;*/
     width: 100%;
     margin-top: 15px;
     text-align: center;
