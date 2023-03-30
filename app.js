@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 app.get('/myquote', (req, res) => {
     const someQuotes = {
-        "count": 5,
+        "count": 11,
         "quotes": [
             {
                 "id": 1,

@@ -7,8 +7,10 @@ const featuredHeading = document.getElementById('featuredHeading');
 const featuredGame = document.getElementById('featuredGame');
 const randomizer = document.getElementById('randomizer');
 const copyright = document.getElementById('copyright');
+
 //checking to make sure things even connected in the first place
 console.log("hello");
+
 
 //Sets html text to static headings
 featuredHeading.innerHTML = "<h1>You should check out...<h1>"
@@ -44,15 +46,15 @@ async function getGames(){
                 for(let y = 0; y <= jsonData.results[i].platforms.length; y++){
                     if(jsonData.results[i].platforms[y].platform.name !== "PC"){
                         if(y > jsonData.results[i].platforms[y].length){
-                            console.log("try again");
+                            console.log("Try again, please.");
                         }
-                        featuredGame.innerHTML = "<p>Searching...</p>"
                         console.log("Searching...");
                         console.log(jsonData.results[i].platforms[y].platform.name);
                     }else if (jsonData.results[i].platforms[y].platform.name === "PC") {
                         let gameName = jsonData.results[i].name; //Name of selected game
                         let gameImage = jsonData.results[i].background_image; //Get background image of game
-                    
+                        console.log(`Found One! Here's ${gameName}`);
+
                     return featuredGame.innerHTML = `<ul>
                         <li>${gameName}</li>
                         <li><img src="${gameImage}" width="30%;"></li>
@@ -81,12 +83,12 @@ async function getPersonalQuote(){
 
 //function calls for displaying information to the app
 setHeading("h1", "PC Game Picker");
-setSubHeading("h2", "Not sure what to play on your PC? We're here for you!" )
+setSubHeading("h2", "Not sure what to play on your PC? <p>I've got you covered!</p>" )
 getPersonalQuote();
 getGames();
 
 
-//Event Listeners
+//Event Listener for button
 randomizer.addEventListener('click', () => {
     getGames();
 })
