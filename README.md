@@ -11,9 +11,12 @@ This application does the following:
 
 In order for this application to run properly:
 
+
 - Install nodejs and npm. Make sure they are updated them if you already have them installed.
 - Run "npm install express"
 - Run "npm install cors"
+- Go to the folder where you've cloned the repo
 - Run "npm start"
+- Visit https://alexdavisiii.github.io/Random-PC-Game-Picker/
 - If application was started before running "npm start", refresh the application.
 

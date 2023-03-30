@@ -41,6 +41,9 @@ async function getGames(){
             console.log(jsonData);
             
 
+            
+            /*look into filter loop for below*/
+
             //Where the magic happens for the Featured Game section
             for (let i = Math.floor(Math.random() * jsonData.results.length); i <= jsonData.results.length; i++){
                 for(let y = 0; y <= jsonData.results[i].platforms.length; y++){
@@ -57,7 +60,7 @@ async function getGames(){
 
                     return featuredGame.innerHTML = `<ul>
                         <li>${gameName}</li>
-                        <li><img src="${gameImage}" width="30%;"></li>
+                        <li><img src="${gameImage}"></li>
                         </ul>`;                    
                     }
                 }
