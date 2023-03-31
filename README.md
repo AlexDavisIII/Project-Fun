@@ -11,6 +11,7 @@ This application does the following:
 
 -*REQUIRES NODE.JS uses EXPRESS.JS* Utilizes local API created by me through Express.js to store and display a list of quotes at random to be displayed whenever a user visits the page. The quotes are stored in an array of objects and are displayed in the footer above my "copyright".
 
+-Check the console to watch it search through the different platforms before finding a PC game if you'd like! It also contains the RAWG API Object this demo is pulling from.
 
 In order for this application to run properly:
 
@@ -18,6 +19,5 @@ In order for this application to run properly:
 - Run "npm install express"
 - Run "npm install cors"
 - Go to the folder where you've cloned the repo
-- Run "npm start" to allow the localAPI to work (localhost:3000 is NOT the application)
+- Run "npm start" to allow the localAPI to work and avoid CORS request block (localhost:3000 is NOT the application)
 - Run the demo in Live Server from Visual Studio Code
-
