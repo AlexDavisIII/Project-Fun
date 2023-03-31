@@ -19,4 +19,3 @@ In order for this application to run properly:
 - Run "npm start"
 - Visit https://alexdavisiii.github.io/Random-PC-Game-Picker/
 - If application was started before running "npm start", refresh the application.
-

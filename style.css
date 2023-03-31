@@ -59,10 +59,8 @@ section{
 }
 
 #featuredGame img{
-    max-width: 500px;
-    min-height: 200px;
-    width: 450px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 #featuredHeading{
@@ -123,11 +121,12 @@ footer{
 
 }
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1400px){
 
     #featuredContainer{
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        gap: 4.5rem;
     }
 
     #featuredGame ul li{
@@ -140,8 +139,68 @@ footer{
     }
 
     #featuredGame img{
-        max-width: 300px;
-        max-height: 250px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .button{    
+        padding: 5px;   
+        height: 55px;
+    }
+
+    .button:hover{
+        padding: 5px;
+        height: 55px;
+    }
+
+    #pcHead{
+        font-size: 1em;
+    }
+
+    .subMessage{
+        display:flex;
+        flex-direction: row;
+        font-size: 1.5em;
+        text-align: center;
+        margin:0px;
+        padding: 10px;
+    }
+
+    nav{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+
+    #pcHead{
+        font-size: 1.2em;
+    }
+
+    #featuredContainer{
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #featuredGame ul li{
+        font-size: 1.5em;
+        
+    }
+
+    #featuredHeading{
+        font-size: 1.5em;
+    }
+
+    #featuredGame img{
+        max-width: 200px;
+        max-height: 200px;
     }
 
     .button{    
@@ -180,6 +239,15 @@ footer{
 
 @media screen and (max-width: 620px){
 
+    #pcHead{
+        font-size: 1.3rem;
+    }
+
+    #featuredHeading{
+        font-size: 1.5em;
+    }
+
+
     #featuredContainer{
         flex-direction: column;
         justify-content: center;
@@ -188,16 +256,18 @@ footer{
     .button{
         padding: 10px;
         max-height: 45px;
+        font-size: 1em;
     }
 
     .button:hover{
         padding: 10px;
         height: 45px;
+        font-size: 1em;
     }
 
     #featuredGame img{
-        max-width: 300px;
-        max-height: 250px;
+        max-width: 150px;
+        max-height: 150px;
     }
 
     #featuredGame ul li{
@@ -217,7 +287,7 @@ footer{
     .subMessage{
         display:flex;
         flex-direction: row;
-        font-size: 1.5em;
+        font-size: 1em;
         text-align: center;
         padding: 10px;
     }
@@ -227,6 +297,70 @@ footer{
     }
 
     footer{
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+
+    #featuredHeading{
+        font-size: 1em;
+    }
+
+    #featuredContainer{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .button{
+        padding: 10px;
+        max-height: 45px;
+        width: 150px;
+        font-size: .9em;
+    }
+
+    .button:hover{
+        padding: 10px;
+        height: 45px;
+        width: 150px;
+        font-size: .9em;
+    }
+
+    #featuredGame img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    #featuredGame ul li{
+        font-size: 1.0em;
+    }
+
+    #pcHead{
+        font-size: 20px;
+    
+    }
+    
+    #quoteContainer p{
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    .subMessage{
+        display:flex;
+        flex-direction: row;
+        font-size: 1em;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav{
+        text-align: center;
+    }
+
+    footer{
+        font-size: 1em;
         text-align: center;
     }
 
